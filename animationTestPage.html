@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    
+    div.square {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    
+    div.square p{
+        margin: 0;
+    }
+    
+    .center {
+        margin: auto;
+        width: 50%;
+        border: 3px solid gray;
+        padding: 10px;
+    }
+    
+    #container {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        background: black; 
+    }
+    #box1 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: dodgerblue;
+    }
+    #box2 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: orangered; 
+        
+    }
+    #box3 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: greenyellow;
+    }
+    #box4 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: orange
+    }
+
+</style>
+</head>
+    
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a class="active" href="settingsPage.html">Settings</a></li>
+</ul>
+
+<header>
+    <h1> Welcome </h1>
+    
+</header>
+    <body>
+            
+        <button onclick="animateFunctionBox1()">Click Me</button> 
+    
+        <div id = "container" class = "square">
+        <div id = "box1" class = "square"></div>
+        <div id = "box2" class = "square"></div>
+        <div id = "box3" class = "square"></div>
+        <div id = "box4" class = "square"></div>
+        </div>
+        
+        
+            <script src="anime.min.js"></script>
+            
+        <script>
+                function animateFunctionBox1() {
+                    var box = anime({
+                        targets: document.getElementById('box1'),
+                        translateX: [
+                            {value: 100, duration: 1000, delay: 500, elasticity: 0},
+                            {value: 100, duration: 1000, delay: 500, elasticity: 0}
+                        ],
+                        translateY: [
+                            {value: -50, duration: 500, elasticity: 100},
+                            {value: 50, duration: 500, delay: 1000, elasticity: 100}, 
+                            {value: -50, duration: 500, delay: 1000, elasticity: 100}
+                        ],
+                        scaleX: [
+                            {value: 4, duration: 100, delay: 500, easing: 'easeOutExpo'},
+                            {value: 1, duration: 900, elasticity: 300},
+                            {value: 4, duration: 100, delay: 500, easing: 'easeOutExpo'},
+                            {value: 1, duration: 900, elasticity: 300}
+                        ], 
+                        scaleY: [
+                            { value: [1.75, 1], duration: 500 },
+                            { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+                            { value: 1, duration: 450 },
+                            { value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+                            { value: 1, duration: 450 }
+  ]
+                    }); 
+                var box2 = anime({
+                        targets: document.getElementById('box2'),
+                        translateX: [
+                            {value: 100, duration: 1000, delay: 500, elasticity: 0},
+                            //{value: 0, duration: 1000, delay: 500, elasticity: 0}
+                        ],
+                        translateY: [
+                            {value: -50, duration: 500, elasticity: 100},
+                            //{value: 40, duration: 500, delay: 1000, elasticity: 100}, 
+                            //{value: 0, duration: 500, delay: 1000, elasticity: 100}
+                        ],
+                        scaleX: [
+                            {value: 4, duration: 100, delay: 500, easing: 'easeOutExpo'},
+                            {value: 1, duration: 900, elasticity: 300},
+                            //{value: 4, duration: 100, delay: 500, easing: 'easeOutExpo'},
+                            //{value: 1, duration: 900, elasticity: 300}
+                        ], 
+                        scaleY: [
+                            { value: [1.75, 1], duration: 500 },
+                            //{ value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+                            //{ value: 1, duration: 450 },
+                            //{ value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+                            //{ value: 1, duration: 450 }
+  ]
+                    }); 
+                var box3 = anime({
+                        targets: document.getElementById('box3'),
+                        translateX: [
+                            {value: 100, duration: 1000, delay: 500, elasticity: 0},
+                            {value: 0, duration: 1000, delay: 500, elasticity: 0}
+                        ],
+                        translateY: [
+                            {value: -50, duration: 500, elasticity: 100},
+                            {value: 50, duration: 500, delay: 1000, elasticity: 100}, 
+                            //{value: 0, duration: 500, delay: 1000, elasticity: 100}
+                        ],
+                        scaleX: [
+                            {value: 4, duration: 100, delay: 500, easing: 'easeOutExpo'},
+                            {value: 1, duration: 900, elasticity: 300},
+                            //{value: 4, duration: 100, delay: 500, easing: 'easeOutExpo'},
+                            //{value: 1, duration: 900, elasticity: 300}
+                        ], 
+                        scaleY: [
+                            { value: [1.75, 1], duration: 500 },
+                            { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+                            { value: 1, duration: 450 },
+                           //{ value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+                            //{ value: 1, duration: 450 }
+  ]
+                    }); 
+                var box4 = anime({
+                        targets: document.getElementById('box4'),
+                        translateX: [
+                            {value: 100, duration: 1000, delay: 500, elasticity: 0},
+                            {value: -200, duration: 1000, delay: 500, elasticity: 0}
+                        ],
+                        translateY: [
+                            {value: -50, duration: 500, elasticity: 100},
+                            {value: 50, duration: 500, delay: 1000, elasticity: 100}, 
+                            //{value: 0, duration: 500, delay: 1000, elasticity: 100}
+                        ],
+                        scaleX: [
+                            {value: 4, duration: 100, delay: 500, easing: 'easeOutExpo'},
+                            {value: 1, duration: 900, elasticity: 300},
+                            {value: 4, duration: 100, delay: 500, easing: 'easeOutExpo'},
+                            {value: 1, duration: 900, elasticity: 300}
+                        ], 
+                        scaleY: [
+                            { value: [1.75, 1], duration: 500 },
+                            { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+                            { value: 1, duration: 450 },
+                            { value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
+                            { value: 1, duration: 450 }
+  ]
+                    }); 
+            }
+        </script>
